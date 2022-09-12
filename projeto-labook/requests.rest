@@ -1,0 +1,57 @@
+### Endpoint de teste
+GET http://localhost:3003/ping
+
+### Endpoint de signup
+POST http://localhost:3003/users/signup 
+Content-Type: application/json
+
+{
+    "name": "Nicoly",
+    "email": "nicoly@gmail.com",
+    "password": "abc123"
+}
+
+### Endpoint de login
+POST http://localhost:3003/users/login
+Content-Type: application/json
+
+{
+    "email": "nicoly@gmail.com",
+    "password": "abc123"
+}
+
+### Endpoint que cria um post
+POST http://localhost:3003/posts
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImU0MzIyMDViLTViOTctNGViNS1hN2U5LTRiMmUwNWNiNDYzNSIsInJvbGUiOiJOT1JNQUwiLCJpYXQiOjE2NjAzMjUxNzgsImV4cCI6MTY2MDQxMTU3OH0.uwvEisKpBqiGA67mBfDQofhhX6nfWYccdWjOt_yKutQ
+
+{
+    "content": "Testando endpoint de criação de post"
+}
+
+### Endpoint que pega todos os posts
+GET http://localhost:3003/posts
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImU0MzIyMDViLTViOTctNGViNS1hN2U5LTRiMmUwNWNiNDYzNSIsInJvbGUiOiJOT1JNQUwiLCJpYXQiOjE2NjAzMjUxNzgsImV4cCI6MTY2MDQxMTU3OH0.uwvEisKpBqiGA67mBfDQofhhX6nfWYccdWjOt_yKutQ
+
+### Endpoint que deleta post
+DELETE http://localhost:3003/posts/0ff601b4-31e0-46c4-9465-d91c7087fda1
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImU0MzIyMDViLTViOTctNGViNS1hN2U5LTRiMmUwNWNiNDYzNSIsInJvbGUiOiJOT1JNQUwiLCJpYXQiOjE2NjAzMjUxNzgsImV4cCI6MTY2MDQxMTU3OH0.uwvEisKpBqiGA67mBfDQofhhX6nfWYccdWjOt_yKutQ
+
+### Endpoint que curte um post
+POST http://localhost:3003/posts/post/201
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImU0MzIyMDViLTViOTctNGViNS1hN2U5LTRiMmUwNWNiNDYzNSIsInJvbGUiOiJOT1JNQUwiLCJpYXQiOjE2NjAzMjUxNzgsImV4cCI6MTY2MDQxMTU3OH0.uwvEisKpBqiGA67mBfDQofhhX6nfWYccdWjOt_yKutQ
+
+
+### Endpoint que descurte um post
+DELETE http://localhost:3003/posts/post/201
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImU0MzIyMDViLTViOTctNGViNS1hN2U5LTRiMmUwNWNiNDYzNSIsInJvbGUiOiJOT1JNQUwiLCJpYXQiOjE2NjAzMjUxNzgsImV4cCI6MTY2MDQxMTU3OH0.uwvEisKpBqiGA67mBfDQofhhX6nfWYccdWjOt_yKutQ
+
+
+### Endpoint que edita um post
+PUT http://localhost:3003/posts/a325d285-6449-4570-8095-402f7ad13125
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImU0MzIyMDViLTViOTctNGViNS1hN2U5LTRiMmUwNWNiNDYzNSIsInJvbGUiOiJOT1JNQUwiLCJpYXQiOjE2NjAzMjUxNzgsImV4cCI6MTY2MDQxMTU3OH0.uwvEisKpBqiGA67mBfDQofhhX6nfWYccdWjOt_yKutQ
+Content-Type: application/json
+
+{
+    "content": "Testando endpoint de editar"
+}
